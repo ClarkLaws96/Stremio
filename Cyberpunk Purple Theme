@@ -1,0 +1,231 @@
+/**
+ * @name Cyberpunk Purple
+ * @description Purple Cyberpunk Theme with neon purple accents.
+ * @version 1.0.0
+ * @author ClarkLaws96
+ */
+
+@font-face {
+    font-family: 'NotoColorEmoji';
+    src: url('https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@main/fonts/NotoColorEmoji.ttf') format('truetype');
+}
+
+:root {
+    --primary-background-color: transparent !important;
+    --secondary-background-color: rgba(20, 10, 35, 0.7) !important;
+    --modal-background-color: #1a0b2e !important;
+    --primary-color: #9d4edd !important;
+    --accent-color: #c8b6ff !important;
+}
+
+ {
+    transition: none !important; 
+    outline: none !important;
+    box-shadow: none !important;
+    --tw-ring-color: transparent !important;
+    --tw-ring-offset-color: transparent !important;
+}
+
+body {
+    background: radial-gradient(ellipse 160% 100% at 0% 100%, 
+        #000000 0%,     
+        #000000 60%,    
+        #1a0b2e 80%,    
+        #7b2cbf 90%,    
+        #bf00ff 95%,    
+        #c022ff 100%    
+    ) fixed !important;
+    background-color: #000000 !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+}
+
+div[class*="meta-item-container"], 
+div[class*="meta-item"],
+div[class*="poster-wrapper"] {
+    background-color: transparent !important;
+    background: transparent !important;
+    border: 2px solid transparent !important; /* Keeps the size stable */
+}
+
+div[class*="section"], 
+div[class*="row-container"] {
+    background: transparent !important;
+}
+
+div[class*="meta-item-container"]:hover,
+div[class*="poster"]:hover,
+div[data-element="meta-item"]:hover {
+    border: 2px solid #bf00ff !important;
+    box-shadow: 0 0 15px #bf00ff !important;
+    background-color: rgba(191, 0, 255, 0.05) !important;
+}
+
+[class*="sub-header"]:hover, 
+[class*="title-container"]:hover {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+input[class*="search"], button, [role="button"] {
+    border: 1px solid #bf00ff !important;
+    background-color: rgba(26, 11, 46, 0.8) !important;
+}
+
+button:hover {
+    background-color: #bf00ff !important;
+    color: #000000 !important;
+}
+
+[class*="nav-item"] svg, .navigation-item svg {
+    background: linear-gradient(145deg, #ffffff, #a1a1a1, #ffffff, #666666, #d1d1d1) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important; 
+    transition: all 0.3s ease !important;
+}
+
+[class*="nav-item"]:hover svg {
+    color: #bf00ff !important; 
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    transform: scale(1.2) !important;
+}
+
+div[class*="main-container"]::after {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%);
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: -1; 
+    opacity: 0.1;
+}
+[role="button"] {
+    border: 1px solid #bf00ff !important;
+    box-shadow: 0 0 10px rgba(191, 0, 255, 0.5) !important;
+    background-color: rgba(26, 11, 46, 0.8) !important;
+    border-radius: 4px !important;
+}
+
+button:hover, [role="button"]:hover {
+    background-color: #bf00ff !important;
+    color: #000000 !important;
+    box-shadow: 0 0 20px #bf00ff !important;
+}
+
+[class*="nav-item"] svg, .navigation-item svg {
+    background: linear-gradient(145deg, #ffffff 0%, #a1a1a1 25%, #ffffff 50%, #666666 75%, #d1d1d1 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important; 
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.8)) !important;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+[class*="nav-item"]:hover svg, .navigation-item:hover svg {
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+    color: #bf00ff !important; 
+    transform: scale(1.25) !important;
+    filter: drop-shadow(0 0 5px #bf00ff) drop-shadow(0 0 15px #bf00ff) !important;
+}
+
+div[class*="main-container"]::after, 
+div[class*="App-content"]::after {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%);
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: -1; 
+    opacity: 0.12;
+}
+
+#root, .app-container, [class*="main-container"] {
+    background: transparent !important;
+}
+[class*="active"] svg, 
+[class*="selected"] svg {
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    color: #c022ff !important;
+    filter: drop-shadow(0 0 10px #bf00ff) !important;
+}
+
+[class*="header"], [class*="title"], h1, h2 {
+    font-family: 'Segoe UI', 'Roboto', sans-serif !important; 
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    color: #ffffff !important; 
+    text-shadow: 0 0 10px rgba(191, 0, 255, 0.8) !important;
+}
+
+[class*="description"], [class*="subtitle"], p {
+    color: #b0b0b0 !important;
+    text-shadow: none !important;
+}
+
+div[data-element="meta-item"], div[class*="Poster"] {
+    border-radius: 0px !important; /* Kill the roundness */
+    border: 1px solid rgba(191, 0, 255, 0.3) !important;
+    /* This creates a subtle 'cut corner' at the bottom right */
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 92% 100%, 0 100%) !important;
+}
+
+div[data-element="meta-item"]:hover {
+    border: 1px solid #00ffea !important;
+    box-shadow: 4px 0px 0px #ff0055, -4px 0px 0px #00ffea !important;
+    transform: scale(1.05) skewX(-1deg) !important; 
+}
+
+div[class*="watched-progress-bar"] {
+    height: 4px !important;
+    background: repeating-linear-gradient(
+      45deg,
+      #bf00ff,
+      #bf00ff 5px,
+      #000000 5px,
+      #000000 10px
+    ) !important;
+}
+
+[class*="side-bar"] {
+    border-right: 2px solid #bf00ff !important;
+    box-shadow: 2px 0 10px rgba(191, 0, 255, 0.4) !important;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%);
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.2;
+}
+
+[id*="stremio-video"]::after, 
+[class*="video-player"]::after, 
+[class*="player-container"]::after,
+.video-container::after {
+    display: none !important;
+    content: none !important;
+    background: none !important;
+}
+
+[id*="stremio-video"], video {
+    z-index: 9999 !important;
+    position: relative !important;
+}
+
+body:has(video)::after { display: none !important; }
